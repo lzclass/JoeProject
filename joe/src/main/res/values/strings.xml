@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">joe</string>
+    <string name="permission_control">权限控制</string>
+    <string name="permission_allow">已经授权！</string>
+    <string name="permission_refuse">拒绝授权，提示请求许可理由！</string>
+    <string name="permission_noAsk">拒绝授权，不再提醒！</string>
+
+</resources>

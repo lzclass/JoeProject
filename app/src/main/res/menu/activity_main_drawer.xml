@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_msg_setting"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="消息设置" />
+        <item
+            android:id="@+id/nav_about_us"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="关于我们" />
+        <item
+            android:id="@+id/nav_clear_cache"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="清除缓存" />
+        <item
+            android:id="@+id/nav_check_update"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="检查更新" />
+    </group>
+
+    <item android:title="">
+        <menu>
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_menu_share"
+                android:title="退出登录" />
+
+        </menu>
+    </item>
+
+</menu>
