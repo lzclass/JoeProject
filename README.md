@@ -1,2 +1,2 @@
 # JoeProject
-android项目流行的常用框架：RxJava2+Glide+
+RxJava2+Retrofit2+Glide+GreenDao+Logger+Toast+BindView+Permission
