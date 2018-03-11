@@ -1,4 +1,4 @@
-package com.wiwj.maigcer.model.bean;
+package com.wiwj.maigcer.net;
 
 import java.io.File;
 import java.io.Serializable;

@@ -9,8 +9,11 @@ import com.wiwj.maigcer.R;
 import com.wiwj.maigcer.db.DbHelper;
 import com.wiwj.maigcer.db.dbmodel.UserModel;
 import com.wiwj.maigcer.glide.GlideManager;
+import com.wiwj.maigcer.model.bean.LoginResult;
 import com.wiwj.maigcer.permission.OnPermissionCallback;
 import com.wiwj.maigcer.permission.PermissionManager;
+import com.wiwj.maigcer.presenter.iview.ILoginView;
+import com.wiwj.maigcer.presenter.login.LoginPresenter;
 import com.wiwj.maigcer.utils.Utils;
 
 import butterknife.BindView;
@@ -20,9 +23,15 @@ import butterknife.BindView;
  * @Date: 2018/3/10 0:11
  * @Description: 测试框架类，开发完删掉
  */
-public class TestActivity extends ToolbarBaseActivity {
+public class TestActivity extends ToolbarBaseActivity implements ILoginView {
     @BindView(R.id.iv_test)
     ImageView iv_test;
+    LoginPresenter presenter;
+
+    @Override
+    public void setLoginResult(LoginResult data) {
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,13 +41,18 @@ public class TestActivity extends ToolbarBaseActivity {
 //        LoaderImageTest();
 //        PermissionTest();
         DBTest();
+        getNetData();
+    }
 
+    private void getNetData() {
+        presenter = new LoginPresenter(this, this);
+        presenter.getLoginUserInfo("13388888888", "cs1234", "1");
     }
 
     private void DBTest() {
         for (int i = 0; i < 10; i++) {
             UserModel userModel = new UserModel();
-            userModel.setId(Long.valueOf(i+100));
+            userModel.setId(Long.valueOf(i + 100));
             userModel.setUser_id(1004);
             userModel.setUser_name("Joe4444");
 //            DbHelper.getInstance().getUserModelDBManager().insert(userModel);
@@ -46,6 +60,7 @@ public class TestActivity extends ToolbarBaseActivity {
         }
 
     }
+
     private void PermissionTest() {
         PermissionManager.instance().with(this).request(new OnPermissionCallback() {
             @Override

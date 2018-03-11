@@ -1,4 +1,4 @@
-package com.wiwj.maigcer.model.net;
+package com.wiwj.maigcer.net;
 
 /**
  * description: 用于Retrofit监控当前View层生命周期的状态值

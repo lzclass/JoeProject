@@ -8,7 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 
 import com.wiwj.maigcer.R;
-import com.wiwj.maigcer.model.net.LifeCycleEvent;
+import com.wiwj.maigcer.net.LifeCycleEvent;
 import com.wiwj.maigcer.utils.ActivityManager;
 
 import io.reactivex.Observable;

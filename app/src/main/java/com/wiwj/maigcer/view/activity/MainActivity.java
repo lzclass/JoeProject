@@ -10,12 +10,10 @@ import android.view.MenuItem;
 import android.widget.ImageView;
 
 import com.wiwj.maigcer.R;
-import com.wiwj.maigcer.model.net.LifeCycleEvent;
 import com.wiwj.maigcer.presenter.iview.IMainView;
 import com.wiwj.maigcer.presenter.main.MainPresenter;
 
 import butterknife.BindView;
-import io.reactivex.subjects.PublishSubject;
 
 public class MainActivity extends BaseActivity
         implements NavigationView.OnNavigationItemSelectedListener, IMainView {
@@ -40,11 +38,6 @@ public class MainActivity extends BaseActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         presenter = new MainPresenter(this, this);
-    }
-
-    @Override
-    public PublishSubject<LifeCycleEvent> getLifeSubject() {
-        return null;
     }
 
     @Override

@@ -1,6 +1,7 @@
 package com.wiwj.maigcer.model.net;
 
 import com.wiwj.maigcer.model.bean.LoginResult;
+import com.wiwj.maigcer.net.HttpResult;
 
 import java.util.Map;
 

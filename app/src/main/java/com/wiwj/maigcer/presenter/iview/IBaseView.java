@@ -1,6 +1,6 @@
 package com.wiwj.maigcer.presenter.iview;
 
-import com.wiwj.maigcer.model.net.LifeCycleEvent;
+import com.wiwj.maigcer.net.LifeCycleEvent;
 
 import io.reactivex.subjects.PublishSubject;
 

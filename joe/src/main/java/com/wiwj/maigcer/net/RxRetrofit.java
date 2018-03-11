@@ -1,12 +1,10 @@
-package com.wiwj.maigcer.model.net;
+package com.wiwj.maigcer.net;
 
 import android.content.Context;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.orhanobut.logger.Logger;
-import com.wiwj.maigcer.common.BaseConfig;
-import com.wiwj.maigcer.model.bean.FileEntity;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -73,7 +71,6 @@ public class RxRetrofit {
                 .writeTimeout(WRITE_TIME_OUT, TimeUnit.SECONDS)
                 .connectTimeout(CONNECT_TIME_OUT, TimeUnit.SECONDS)
                 .addInterceptor(new HeaderInterceptor())
-                .addInterceptor(new LoggingInterceptor())
                 .cache(getCache())
                 .hostnameVerifier(org.apache.http.conn.ssl.SSLSocketFactory.ALLOW_ALL_HOSTNAME_VERIFIER)
 //              .sslSocketFactory(getSSLSocketFactory(mContext, new int[]{R.raw.tomcat}), trustManager)//设置https访问(验证证书)请把服务器给的证书文件放在R.raw文件夹下
@@ -88,13 +85,8 @@ public class RxRetrofit {
 
         return retrofit;
     }
-    private static ApiService apiService;
-    public static ApiService getDefaultService() {
-        if (apiService == null) {
-            apiService = RxRetrofit.getRetrofit(BaseConfig.API_HOST).create(ApiService.class);
-        }
-        return apiService;
-    }
+
+
     //配置缓存
     public static Cache getCache() {
         File cacheFile = new File(mContext.getExternalCacheDir(), "HttpCache");//缓存地址

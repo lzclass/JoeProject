@@ -1,4 +1,4 @@
-package com.wiwj.maigcer.model.net;
+package com.wiwj.maigcer.net;
 
 /**
  * Created by liuzhao on 2018/3/7.

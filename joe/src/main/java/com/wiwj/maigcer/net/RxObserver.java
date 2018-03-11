@@ -1,4 +1,4 @@
-package com.wiwj.maigcer.model.net;
+package com.wiwj.maigcer.net;
 
 import android.app.Dialog;
 import android.app.ProgressDialog;

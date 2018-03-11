@@ -43,7 +43,7 @@ public class DbHelper {
 
     public void init(Context context) {
         mHelper = new DaoMaster.DevOpenHelper(context, DB_NAME, null);
-        mDaoMaster = new DaoMaster(mHelper.getWritableDatabase());
+        mDaoMaster = new DaoMaster(mHelper.getWritableDb());
         mDaoSession = mDaoMaster.newSession();
         QueryBuilder.LOG_SQL = Constants.IS_DEBUG;//打印sql日志
         QueryBuilder.LOG_VALUES = Constants.IS_DEBUG;
@@ -51,7 +51,7 @@ public class DbHelper {
 
     public void init(Context context, String dbName) {
         mHelper = new DaoMaster.DevOpenHelper(context, dbName, null);
-        mDaoMaster = new DaoMaster(mHelper.getWritableDatabase());
+        mDaoMaster = new DaoMaster(mHelper.getWritableDb());
         mDaoSession = mDaoMaster.newSession();
 
     }

@@ -4,8 +4,9 @@ import android.app.Application;
 
 import com.wiwj.maigcer.config.Constants;
 import com.wiwj.maigcer.db.DbHelper;
+import com.wiwj.maigcer.log.CollectLogManager;
 import com.wiwj.maigcer.log.LogManager;
-import com.wiwj.maigcer.model.net.RxRetrofit;
+import com.wiwj.maigcer.net.RxRetrofit;
 import com.wiwj.maigcer.utils.ToastUtils;
 
 /**
@@ -31,6 +32,7 @@ public class BaseApplication extends Application {
         LogManager.init(Constants.IS_DEBUG);//初始化日志
         RxRetrofit.init(ourInstance);//初始化retrofit网络框架
         DbHelper.getInstance().init(ourInstance);//初始化GreenDao数据库
+        CollectLogManager.getInstance().init(ourInstance);//初始化日志收集
     }
 
 }

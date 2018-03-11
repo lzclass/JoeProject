@@ -10,6 +10,7 @@ public final class BaseConfig {
     public static final String CACHE_SP_NAME = "sp_cache";//默认SharedPreferences缓存文件名
     public static final String CACHE_DISK_DIR = "disk_cache";//默认磁盘缓存目录
     public static final String CACHE_HTTP_DIR = "http_cache";//默认HTTP缓存目录
+    public static final String CACHE_LOG_DIR = "http_cache";//默认异常LOG缓存目录
     public static final long CACHE_NEVER_EXPIRE = -1;//永久不过期
 
     public static final int MAX_AGE_ONLINE = 60;//默认最大在线缓存时间（秒）

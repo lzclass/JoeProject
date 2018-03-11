@@ -1,15 +1,7 @@
 package com.wiwj.maigcer.model;
 
-import com.wiwj.maigcer.model.bean.LoginResult;
 import com.wiwj.maigcer.model.bean.user.UserInfo;
-import com.wiwj.maigcer.model.net.HttpResult;
-import com.wiwj.maigcer.model.net.LifeCycleEvent;
-import com.wiwj.maigcer.model.net.RxObserver;
-import com.wiwj.maigcer.model.net.RxRetrofit;
 import com.wiwj.maigcer.utils.PreferencesManager;
-
-import io.reactivex.Observable;
-import io.reactivex.subjects.PublishSubject;
 
 /**
  * Created by liuzhao on 2018/3/6.
@@ -31,12 +23,6 @@ public class LoginModel {
     }
 
     private LoginModel() {
-    }
-
-    public void getLoginUserInfo(String principal, String password, String validePassword, RxObserver<LoginResult> observer, PublishSubject<LifeCycleEvent> lifecycleSubject) {
-        Observable<HttpResult<LoginResult>> observable = RxRetrofit.getDefaultService()
-                .getLoginInfo(principal, password, validePassword);
-        RxRetrofit.composeToSubscribe(observable, observer, lifecycleSubject);
     }
 
     /**
