@@ -52,7 +52,7 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <com.wiwj.maigcer.view.widget.loadlayout.LoadLayout
+    <com.wiwj.maigcer.utils.loadlayout.LoadLayout
         android:id="@+id/base_content_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
