@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 
 import com.orhanobut.logger.Logger;
-import com.wiwj.maigcer.view.activity.BaseActivity;
+import com.wiwj.maigcer.ui.base.BaseActivity;
 
 import java.util.Stack;
 

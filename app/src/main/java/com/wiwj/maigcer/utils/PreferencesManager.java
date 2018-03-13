@@ -3,8 +3,7 @@ package com.wiwj.maigcer.utils;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.wiwj.maigcer.config.Constants;
-import com.wiwj.maigcer.view.activity.BaseApplication;
+import com.wiwj.maigcer.BaseApplication;
 
 /**
  * Created by liuzhao on 2018/3/8.

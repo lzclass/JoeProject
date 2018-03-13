@@ -18,7 +18,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
 
 import com.wiwj.maigcer.R;
-import com.wiwj.maigcer.view.activity.MainActivity;
+import com.wiwj.maigcer.ui.main.MainActivity;
 
 import static android.content.Context.TELEPHONY_SERVICE;
 
